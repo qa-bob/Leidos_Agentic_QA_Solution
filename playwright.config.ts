@@ -50,8 +50,8 @@ export default defineConfig({
     },
 
     // --- careers.leidos.com project ---
-    // careers.leidos.com is protected by Cloudflare Turnstile; headed mode is required
-    // to pass the bot challenge in local/non-CI environments.
+    // Note: careers.leidos.com uses Cloudflare Turnstile bot protection which may
+    // block headless browsers. Tests are skipped in CI unless CAREERS_TESTS_ENABLED=true.
     {
       name: 'careers',
       testMatch: '**/careers.spec.ts',
@@ -60,7 +60,6 @@ export default defineConfig({
         baseURL: 'https://careers.leidos.com',
         userAgent: SHARED_USER_AGENT,
         ignoreHTTPSErrors: true,
-        headless: false,
         launchOptions: {
           args: ['--disable-blink-features=AutomationControlled'],
         },
