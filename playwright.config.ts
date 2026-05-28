@@ -25,27 +25,27 @@ export default defineConfig({
     // --- leidos.com projects ---
     {
       name: 'chromium',
-      testMatch: '**/homepage.spec.ts',
+      testIgnore: '**/careers.spec.ts',
       use: { ...devices['Desktop Chrome'] },
     },
     {
       name: 'firefox',
-      testMatch: '**/homepage.spec.ts',
+      testIgnore: '**/careers.spec.ts',
       use: { ...devices['Desktop Firefox'] },
     },
     {
       name: 'webkit',
-      testMatch: '**/homepage.spec.ts',
+      testIgnore: '**/careers.spec.ts',
       use: { ...devices['Desktop Safari'] },
     },
     {
       name: 'mobile-chrome',
-      testMatch: '**/homepage.spec.ts',
+      testIgnore: '**/careers.spec.ts',
       use: { ...devices['Pixel 5'] },
     },
     {
       name: 'mobile-safari',
-      testMatch: '**/homepage.spec.ts',
+      testIgnore: '**/careers.spec.ts',
       use: { ...devices['iPhone 12'] },
     },
 
