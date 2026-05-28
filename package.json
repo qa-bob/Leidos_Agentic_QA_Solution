@@ -1,0 +1,16 @@
+{
+  "name": "leidos-agentic-qa",
+  "version": "1.0.0",
+  "description": "Playwright test automation for Leidos",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
