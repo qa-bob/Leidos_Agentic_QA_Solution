@@ -49,21 +49,5 @@ export default defineConfig({
       use: { ...devices['iPhone 12'] },
     },
 
-    // --- careers.leidos.com project ---
-    // Note: careers.leidos.com uses Cloudflare Turnstile bot protection which may
-    // block headless browsers. Tests are skipped in CI unless CAREERS_TESTS_ENABLED=true.
-    {
-      name: 'careers',
-      testMatch: '**/careers.spec.ts',
-      use: {
-        ...devices['Desktop Chrome'],
-        baseURL: 'https://careers.leidos.com',
-        userAgent: SHARED_USER_AGENT,
-        ignoreHTTPSErrors: true,
-        launchOptions: {
-          args: ['--disable-blink-features=AutomationControlled'],
-        },
-      },
-    },
   ],
 });
