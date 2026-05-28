@@ -15,7 +15,7 @@ export class HomePage {
 
   async goto() {
     await this.page.goto('/', { waitUntil: 'commit' });
-    await this.page.waitForSelector('header', { timeout: 30000 });
+    await this.page.waitForSelector('header', { state: 'attached', timeout: 30000 });
   }
 
   async getTitle() {

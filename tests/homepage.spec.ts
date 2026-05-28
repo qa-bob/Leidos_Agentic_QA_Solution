@@ -28,7 +28,7 @@ test.describe('Leidos Homepage', () => {
   test('should respond within acceptable time', async ({ page }) => {
     const start = Date.now();
     await page.goto('/', { waitUntil: 'commit' });
-    await page.waitForSelector('header', { timeout: 30000 });
+    await page.waitForSelector('header', { state: 'attached', timeout: 30000 });
     const loadTime = Date.now() - start;
 
     expect(loadTime).toBeLessThan(10000);
